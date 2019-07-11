@@ -1,0 +1,88 @@
+.sc_message_list {
+    min-height: 50%;
+    overflow-y: auto;
+    background-color: white;
+    background-size: 100%;
+    padding: 40px 0px 10px;
+  }
+
+  .sc_message_content {
+    width: 100%;
+    display: flex;
+  }
+
+  .sc_message_content_sent {
+    justify-content: flex-end;
+  }
+
+  
+  .sc_message_text {
+    padding: 17px 20px;
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 20px;  
+    line-height: 1.4;
+    white-space: pre-wrap;
+    -webkit-font-smoothing: subpixel-antialiased
+  }
+  .sc_message_text_border{
+    min-height: 1em;
+    margin: 1em 2em 1em 0;
+    padding: 0.1em 0.1em 0.1em 1em;
+    border-left: 3px solid rgba(175, 110, 232, 1)
+  }
+  .sc_message_discovery_text {
+    padding: 17px 20px;
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 20px;  
+    line-height: 1.5;
+    word-spacing: 5px;
+    color: #263238;
+    -webkit-font-smoothing: subpixel-antialiased
+  }
+
+  .sc_message_content_sent .sc_message_text {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.42);
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .sc_message_content_received{
+    /* color: #159de0;
+    background-color: #f4f7f9;
+    margin-right: 40px;
+    justify-content: flex-start;   */
+    /* background-color: #E3ECEC;
+    color:#000000;
+    font-size: 18px;
+    font-family: IBM Plex Sans; */
+  }
+
+  .sc_message_content_received .sc_message_text {
+    color: #263238;
+    background-color: #f4f7f9;
+    margin-right: 40px;
+  }
+
+  .sc_message {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+  }
+
+  .sc_button {
+    font-Size: '35px';
+    color: #9b59b6;
+  }
+
+  @media (min-width: 450px) {
+    .sc_message {
+      width: 80%;
+    }
+  }
+
+  /* Added a new entry .sc_button
+  this might be removed once button.css is fully ready and linked */

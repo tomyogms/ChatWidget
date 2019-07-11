@@ -1,0 +1,39 @@
+.sc_header {
+    background: black;
+    min-height: 75px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sc_header_img {
+    border-radius: 50%;
+    align-self: center;
+    padding: 20px;
+    max-width: 50px;
+  }
+  
+  .sc_header_team_name {
+    align-self: center;
+    padding: 10px;
+    flex: 1;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .sc_header_team_name:hover {
+    background: #4882ed;
+  }
+  
+  @media (max-width: 450px) {
+    .sc_header {
+      border-radius: 0px;
+    }
+  }

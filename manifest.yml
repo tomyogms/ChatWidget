@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: wv-custom-chat
+  host: wv-custom-chat
+  disk_quota: 512M
+  buildpack: https://github.com/heroku/heroku-buildpack-nodejs

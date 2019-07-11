@@ -1,0 +1,5 @@
+node_modules/
+.next/
+next_build/
+components/.DS_Store
+package-lock.json

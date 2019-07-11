@@ -1,0 +1,69 @@
+
+/* Reference source for Flex styling 
+https://codepen.io/adamaoc/pen/KguLA 
+http://iamdustan.com/2014/07/28/flexbox-buttons/
+
+Styling of Buttons is still in progress
+
+*/
+
+h3 {
+  text-align: center;
+  max-width: 100%;
+}
+
+
+.buttonArea {
+  /* margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 50%;
+ 
+  display: -webkit-box;   
+  display: -moz-box;  
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+
+  cursor: pointer;
+
+    background: rgb(108, 148, 232);
+    padding: 0.5em 2.0em;
+    font-size: 1.1em;
+    margin: 1em;
+    color: rgb(252, 252, 252);
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    flex: 1;
+
+   /* border: 2px solid rgba(43, 52, 1, 0.879);*/
+   /* border: 1px solid black; */
+   /* padding: 20px;*/
+    border-radius: 15px; 
+    border: 1px solid #7863EC;
+    max-width: 200px;
+    margin-left: 25px;
+    margin-top:12px;
+    font-size: 18px;
+    font-family: IBM Plex Sans;
+    font-weight: normal;
+    padding-left:12px;
+    padding-right:12px;
+}
+
+.buttonArea:hover {
+  /* background-color: #9b59b6;
+  color: white; */
+}
+
+
+
+
+
+/* Current Status:
+Styling of Buttons using Flex - Needs some modification 
+to disable other buttons when one button is clicked */

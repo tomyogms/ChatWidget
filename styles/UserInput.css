@@ -1,0 +1,114 @@
+.sc_user_input {
+    min-height: 55px;
+    margin: 0px;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    background-color: #f4f7f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color .2s ease,box-shadow .2s ease;
+  }
+
+  .sc_user_input.active {
+    box-shadow: none;
+    background-color: white;
+    box-shadow: 0px -5px 20px 0px rgba(150, 165, 190, 0.2);
+  }
+
+  .sc_user_input_text {
+    /* border: 1px solid #7863EC;
+    width: 875px;
+    height: 48px;
+    border-radius: 30px;
+    /* border-bottom-left-radius: 10px; */
+   /* box-sizing: border-box;
+    padding: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #565867;
+    -webkit-font-smoothing: antialiased;
+    max-height: 200px;
+    overflow: scroll;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    border: 1px solid #7863EC;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 18px;
+    font-size: 12px;
+    font-weight: 200;
+    font-family: IBM Plex Sans;
+    font-size: 20px;
+    color: #565867;
+    padding: 15px;
+    position: relative;
+    left: 150px;
+    bottom: 0px;
+    height: 48px;
+    width: 1256px;
+    /* max-width:1156px; */
+    /* margin-left:-125px; */
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    border-radius: 30px;
+   
+  }
+
+  .sc_user_input_text:empty:before {
+    content: attr(placeholder);
+    display: block; /* For Firefox */
+    color: rgba(86, 88, 103, 0.3);
+    outline: none;
+  }
+
+  .sc_user_input_buttons {
+    /* width: 100px;
+    position: fixed;
+    right: 30px;
+    height: 100%;
+    display: flex; */
+  }
+
+  .sc_user_input_button:first_of_type {
+    width: 40px;
+  }
+
+  .sc_user_input_button {
+    max-width: 30px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sc_user_icon {
+    width: 35px;
+    height:35px;
+    margin-top: -105px;
+    margin-left:1225px;
+    padding-top:12px;
+    padding-bottom:12px
+  }
+
+  @media (min-width: 375px) {
+    .sc_user_input_text  {
+      margin-left:-138px;
+      margin-right: 262px;
+    }
+     
+  }
+  @media (max-width: 1024px){
+    .sc_user_icon {
+      margin-left:900px;
+    }
+  }
+  @media (max-width:375px){
+    .sc_user_icon {
+      margin-left:50px;
+    } 
+  }
