@@ -11,10 +11,6 @@ class Chat extends Component {
       this.store = initStore();
     }
 
-    onMessageReceived(message) {
-      this.setState({ messages: [...this.state.messages, message] });
-    }
-
     render() {
       return (
       <div>

@@ -30,16 +30,6 @@ class Store {
   updateMessageThem = (message) => {
     let messageObject = {type: 'text', author: 'them', data: { text: message}}
     this.messageList.push(messageObject)
-}
-
-  updateMessageLPAgent = (message) => {
-    let messageObject = {type: 'LPAgent', author: 'them', data: { text: message}}
-    this.messageList.push(messageObject)
-  }
-
-  updateMessageLPSystem = (message) => {
-    let messageObject = {type: 'LPSystem', author: 'them', data: { text: message}}
-    this.messageList.push(messageObject)
   }
 
   updateMessageWA = (message, type, options, pokemon) => {
@@ -47,15 +37,12 @@ class Store {
       this.messageList.push(messageObject)
   }
 
-
   sendConversation = async text => {
     let context = this.context
     let type = ""
     let pokemon = ""
     let action = ""
     let options =[]
-    //https://gsc-WVA-WA-ap1.mybluemix.net/wa
-    //var res = arequest('POST', 'https://gsc-WVA-WA-ap1.mybluemix.net/wa', {
     var res = arequest('POST', 'http://localhost:5000/wa', {
        json: {context: context, input:{text: text}},
     });

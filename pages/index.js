@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Chat from '../components/chat'
 
 export default () => (
