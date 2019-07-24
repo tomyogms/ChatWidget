@@ -3,17 +3,21 @@ import { observer, toJS } from 'mobx-react'
 import TextMessage from './TextMessage'
 import css from '../../styles/message.css'
 import Buttons from './Buttons'
+import PokemonPic from './PokemonPic'
 
 class Message extends Component {
 
   _renderMessageOfType = (type) => {
-    
     switch(type) {
       case 'text':
         return <TextMessage {...this.props.message} />
       //Todo: Here we import the visualization widgets. We might be able to reuse the ones that we have created already.
       case 'choose':
+        console.log("TOMYO",this.props.message)
         return <Buttons store={this.props.store} {...this.props.message}   /> 
+      
+      case 'pic':
+        return <PokemonPic store={this.props.store} {...this.props.message} />
     }
   }
 

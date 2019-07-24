@@ -42,8 +42,8 @@ class Store {
     this.messageList.push(messageObject)
   }
 
-  updateMessageWA = (message, type, options) => {
-      let messageObject = {type: type, author: 'them', data: { text: message}, options:options}
+  updateMessageWA = (message, type, options, pokemon) => {
+      let messageObject = {type: type, author: 'them', data: { text: message, pokemon:pokemon}, options:options}
       this.messageList.push(messageObject)
   }
 
@@ -51,11 +51,11 @@ class Store {
   sendConversation = async text => {
     let context = this.context
     let type = ""
+    let pokemon = ""
     let action = ""
     let options =[]
-    /*var res = arequest('POST', 'https://gsc-WVA-WA-ap1.mybluemix.net/wa', {
-       json: {context: context, input:{text: text}},
-    });*/
+    //https://gsc-WVA-WA-ap1.mybluemix.net/wa
+    //var res = arequest('POST', 'https://gsc-WVA-WA-ap1.mybluemix.net/wa', {
     var res = arequest('POST', 'http://localhost:5000/wa', {
        json: {context: context, input:{text: text}},
     });
@@ -66,16 +66,17 @@ class Store {
     }
     else{
       type = body.output.layout.name
+      pokemon = body.output.pokemon
       if(body.output.inputvalidation !== undefined){
         options = body.output.inputvalidation.oneOf
       }
     }
     if( body.output.action !== undefined){
       action = body.output.action.name
-      if(action == 'agent')
+      if(action == 'human')
           this.initLP()
     }
-    this.updateMessageWA(body.output.text[0], type, options)
+    this.updateMessageWA(body.output.text[0], type, options, pokemon)
   }
 }
 

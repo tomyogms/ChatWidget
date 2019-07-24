@@ -19,7 +19,7 @@ class TextMessage extends Component{
         <img src={`/static/icons/${
               this.props.author === 'me'
                 ? 'Group26'
-                : 'Group24' //using float in below styling
+                : 'global' //using float in below styling
               }.png`} style={{marginTop:'0px',float: this.props.author === 'me' ? 'right':'left', marginLeft: this.props.author === 'me' ? '0px':'12px',marginRight: this.props.author === 'me' ? '12px':'8px',width:'35px',height:'35px'}}/> 
           <div style={{
                   display: 'inline-block',

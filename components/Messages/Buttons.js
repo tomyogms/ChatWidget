@@ -14,6 +14,7 @@ class Buttons extends Component {
     
 render() {
     console.log("BUTTONS", this.props.store)
+    console.log("OPTIONS",this.props)
     const time =  new Date().toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"}); 
   
     return(
@@ -45,7 +46,8 @@ render() {
                     </div>         
                 </div>
                 <span style={{display:'inline-flex',marginLeft:'55px'}}>
-                    {this.props.options.map((tag, i) => {
+                    {
+                        this.props.options.map((tag, i) => {
                     return <Button store={this.props.store} tag={tag} key={i} />
                     })}
                 </span>    
